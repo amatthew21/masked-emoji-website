@@ -3,7 +3,13 @@ window.paypal
     style: {
       shape: "rect",
       layout: "vertical",
+      color: "gold",
+      label: "paypal",
     },
+    message: {
+      amount: 100,
+    },
+
     async createOrder() {
       try {
         const response = await fetch("/api/orders", {
@@ -27,19 +33,19 @@ window.paypal
 
         if (orderData.id) {
           return orderData.id;
-        } else {
-          const errorDetail = orderData?.details?.[0];
-          const errorMessage = errorDetail
-            ? `${errorDetail.issue} ${errorDetail.description} (${orderData.debug_id})`
-            : JSON.stringify(orderData);
-
-          throw new Error(errorMessage);
         }
+        const errorDetail = orderData?.details?.[0];
+        const errorMessage = errorDetail
+          ? `${errorDetail.issue} ${errorDetail.description} (${orderData.debug_id})`
+          : JSON.stringify(orderData);
+
+        throw new Error(errorMessage);
       } catch (error) {
         console.error(error);
         resultMessage(`Could not initiate PayPal Checkout...<br><br>${error}`);
       }
     },
+
     async onApprove(data, actions) {
       try {
         const response = await fetch(`/api/orders/${data.orderID}/capture`, {
@@ -59,7 +65,8 @@ window.paypal
 
         if (errorDetail?.issue === "INSTRUMENT_DECLINED") {
           // (1) Recoverable INSTRUMENT_DECLINED -> call actions.restart()
-          // recoverable state, per https://developer.paypal.com/docs/checkout/standard/customize/handle-funding-failures/
+          // recoverable state, per
+          // https://developer.paypal.com/docs/checkout/standard/customize/handle-funding-failures/
           return actions.restart();
         } else if (errorDetail) {
           // (2) Other non-recoverable errors -> Show a failure message
@@ -73,18 +80,19 @@ window.paypal
             orderData?.purchase_units?.[0]?.payments?.captures?.[0] ||
             orderData?.purchase_units?.[0]?.payments?.authorizations?.[0];
           resultMessage(
-            `Transaction ${transaction.status}: ${transaction.id}<br><br>See console for all available details`,
+            `Transaction ${transaction.status}: ${transaction.id}<br>
+          <br>See console for all available details`
           );
           console.log(
             "Capture result",
             orderData,
-            JSON.stringify(orderData, null, 2),
+            JSON.stringify(orderData, null, 2)
           );
         }
       } catch (error) {
         console.error(error);
         resultMessage(
-          `Sorry, your transaction could not be processed...<br><br>${error}`,
+          `Sorry, your transaction could not be processed...<br><br>${error}`
         );
       }
     },

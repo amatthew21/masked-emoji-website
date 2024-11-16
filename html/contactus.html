@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MASKED EMOJI CLOTHING</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            display: flex;
+            background-color: #333;
+            padding: 12px 0;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .navbar a:hover {
+            background-color: yellow;
+            color: black;
+            transform: scale(1.1);
+        }
+
+        .navbar a.cart-icon {
+            font-size: 30px;
+            margin-left: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar a.cart-icon:hover {
+            transform: scale(1.2);
+        }
+
+        .contact-container {
+            margin: 50px auto;
+            max-width: 800px;
+            padding: 0 15px;
+        }
+
+        .contact-container h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .contact-container p {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .contact-container a {
+            color: #0073e6;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .contact-container a:hover {
+            color: #005bb5;
+        }
+
+        /* logo style */
+        .logo {
+            display: block;
+            margin: 30px auto;
+            max-width: 600px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .social-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px; 
+            vertical-align: middle;
+        }
+
+        .search-container {
+            position: absolute;
+            right: 15px;
+            top: 120px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-container input[type="text"] {
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            width: 250px;
+            transition: width 0.3s ease;
+            outline: none;
+        }
+
+        .search-container input[type="text"]:focus {
+            width: 300px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-container button {
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            background-color: #333;
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-container button:hover {
+            background-color: #575757;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 15px 0;
+            }
+
+            .navbar a {
+                padding: 12px;
+                font-size: 16px;
+            }
+
+            .search-container {
+                top: 160px;
+            }
+
+            .logo {
+                max-width: 80%;
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../html/shirts.html">Shirts</a>
+        <a href="../html/hoodies.html">Hoodies</a>
+        <a href="ENTER FILE NAME HERE FOR sweatpants.html">Sweatpants</a>
+        <a href="ENTER FILE NAME HERE FOR Sweatsuits.html">Sweatsuits</a>
+        <a href="ENTER FILE NAME HERE FOR coming soon.html">Coming soon</a>
+        <a href="ENTER FILE NAME HERE FOR logos and designs.html">Logos and Designs</a>
+        <a href="../html/contactus.html">Contact Us</a>
+        <a href="ENTER FILE NAME FOR checkout page.html" class="cart-icon">🛒</a>
+    </div>
+
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+
+        <!-- logo artwork  -->
+        <img src="../root/img/logoartwork.png" alt="MASKED EMOJI CLOTHING Logo" class="logo">
+
+        <p>At MASKED EMOJI CLOTHING, we value our customers and always aim to provide the best service possible. Whether you have questions about our products, need assistance with your order, or simply want to share feedback, we're here to help! Feel free to reach out to us through any of the following channels:</p>
+
+        <p><strong>Email:</strong> <a href="mailto:officialmaskedemoji@gmail.com">officialmaskedemoji@gmail.com</a><br>
+            You can send us an email at officialmaskedemoji@gmail.com. We aim to respond to all inquiries within 24 hours.
+        </p>
+
+        <p><strong>Instagram:</strong> 
+            <a href="https://www.instagram.com/maskedemojiclothing/" target="_blank">
+                <img src="../root/img/instagram-icon-2048x2048-77ljf1sd.png" alt="Instagram Logo" class="social-icon">
+                Follow us on Instagram
+            </a><br>
+            Stay connected and get the latest updates on new collections by following us on Instagram! Reach out to us through @maskedemojiclothing.
+        </p>
+
+        <p><strong>TikTok:</strong> 
+            <a href="https://www.tiktok.com/@maskedemoji" target="_blank">
+                <img src="../root/img/tiktok-5962992_1280.webp" alt="TikTok Logo" class="social-icon">
+                Follow us on TikTok
+            </a><br>
+            Join our community on TikTok for fun, exclusive content, and much more. Follow us at @maskedemoji and interact with us!
+        </p>
+    </div>
+
+    <!-- Search bar -->
+    <div class="search-container">
+        <input type="text" placeholder="Search products...">
+        <button type="submit">🔍</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MASKED EMOJI | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

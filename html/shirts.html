@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASKED EMOJI CLOTHING - Shirts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .logo {
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+        }
+        .navbar a[href="MECshirts.html"] {
+        background-color: yellow;
+         color: black; /* Change text color for better contrast */
+         }
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        .search-bar input {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-item {
+            text-align: center;
+        }
+        .product-item img {
+            width: 100%;
+            cursor: pointer;
+            max-width: 300px;
+            max-height: 150px;
+        }
+        .product-name {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .product-price {
+            color: #555;
+        }
+        .logo img {
+            width: 100%;
+            cursor: pointer;
+            max-width: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo and Title -->
+    <div class="logo">MASKED EMOJI CLOTHING
+    <img src="../root/logo.png" alt="Toxic Tee"></div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../html/shirts.html">Shirts</a>
+        <a href="../html/hoodies.html">Hoodies</a>
+        <a href="ENTER FILE NAME HERE FOR sweatpants.html">Sweatpants</a>
+        <a href="ENTER FILE NAME HERE FOR Sweatsuits.html">Sweatsuits</a>
+        <a href="ENTER FILE NAME HERE FOR coming soon.html">Coming soon</a>
+        <a href="ENTER FILE NAME HERE FOR logos and designs.html">Logos and Designs</a>
+        <a href="../html/contactus.html">Contact Us</a>
+        <a href="ENTER FILE NAME FOR checkout page.html" class="cart-icon">🛒</a>
+    </div>
+
+      <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search products..." onkeyup="filterProducts()">
+        </div>
+  </div>
+    <!-- Product Grid -->
+    <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-item">
+            <img src="../root/img/toxic1.png" alt="Product 1" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color: Black,Back Logo(orange,pink,green,blue)')">
+            <div class="product-name"> Toxic Tee</div>
+            <div class="product-price">$20.00</div>
+        </div>
+
+    <!-- JavaScript for Popup Message -->
+    <script>
+        function showPopup(name, price) {
+            alert(name + " - " + price);
+        }
+    </script>
+
+</body>
+</html>

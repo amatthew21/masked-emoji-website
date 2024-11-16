@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - MASKED EMOJI CLOTHING</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+        }
+
+        .cart-container {
+            margin: 20px;
+        }
+
+        .cart-item {
+            background-color: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-item h3 {
+            margin: 0;
+        }
+
+        .cart-item p {
+            margin: 5px 0;
+        }
+
+        .cart-total {
+            margin-top: 20px;
+            font-size: 20px;
+            text-align: right;
+        }
+
+        .empty-cart {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .checkout-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .checkout-btn:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="checkout.html">Checkout</a>
+    </div>
+
+    <!-- Cart Container -->
+    <div class="cart-container" id="cart-container">
+        <!-- Cart items will be dynamically added here -->
+    </div>
+
+    <!-- Checkout Button -->
+    <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+
+    <!-- Include the external JavaScript file -->
+    <script src="../js/cart.js"></script>
+
+    <!-- Load and display cart items -->
+    <script>
+        // Display the cart content
+        displayCart();
+
+        // Function to calculate the total price
+        function calculateTotal(cart) {
+            return cart.reduce((total, item) => total + item.price, 0).toFixed(2);
+        }
+
+        // Function to proceed to checkout (optional)
+        function proceedToCheckout() {
+            // In a real scenario, redirect to the checkout page
+            window.location.href = "checkout.html"; // Example redirection
+        }
+    </script>
+
+</body>
+</html>

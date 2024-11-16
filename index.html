@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASKED EMOJI CLOTHING</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* nav bar style */
+        .navbar {
+            display: flex;
+            background-color: #333;
+            padding: 12px 0;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .navbar a:hover {
+            background-color: yellow;
+            color: black; 
+            transform: scale(1.1);
+        }
+
+        .navbar a.cart-icon {
+            font-size: 30px;
+            margin-left: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar a.cart-icon:hover {
+            transform: scale(1.2);
+        }
+
+        /* logo style */
+        .logo {
+            display: block;
+            margin: 30px auto;
+            max-width: 600px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        /* description style */
+        .description {
+            font-size: 18px;
+            color: #333;
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.6;
+            padding: 0 15px;
+        }
+
+        /* search bar styling */
+        .search-container {
+            position: absolute;
+            right: 15px;
+            top: 120px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-container input[type="text"] {
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            width: 250px;
+            transition: width 0.3s ease;
+            outline: none;
+        }
+
+        .search-container input[type="text"]:focus {
+            width: 300px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-container button {
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            background-color: #333;
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-container button:hover {
+            background-color: #575757;
+        }
+
+        /* footer style */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* responsive design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 15px 0;
+            }
+
+            .navbar a {
+                padding: 12px;
+                font-size: 16px;
+            }
+
+            .search-container {
+                top: 160px;
+            }
+
+            .logo {
+                max-width: 80%;
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="../root/index.html">Home</a>
+        <a href="../root/html/shirts.html">Shirts</a>
+        <a href="../root/html/hoodies.html">Hoodies</a>
+        <a href="ENTER FILE NAME HERE FOR sweatpants.html">Sweatpants</a>
+        <a href="ENTER FILE NAME HERE FOR Sweatsuits.html">Sweatsuits</a>
+        <a href="ENTER FILE NAME HERE FOR coming soon.html">Coming soon</a>
+        <a href="ENTER FILE NAME HERE FOR logos and designs.html">Logos and Designs</a>
+        <a href="../root/html/contactus.html">Contact Us</a>
+        <a href="ENTER FILE NAME FOR checkout page.html" class="cart-icon">🛒</a>
+    </div>
+
+    <!-- Logo -->
+    <img src="../root/img/LOGO.png" alt="Masked Emoji Logo" class="logo">
+
+    <!-- description about masked emoji clothing -->
+    <div class="description">
+        <h2>Welcome to MASKED EMOJI CLOTHING!</h2>
+        <p>At Masked Emoji, we bring creativity and comfort together through unique, fashionable apparel. Our collection features a wide range of designs that combine playful emojis with stylish clothing, making a bold statement in every outfit. Whether you're looking for cozy hoodies, graphic t-shirts, or comfortable sweatpants, we’ve got you covered. Every piece is crafted with quality in mind, perfect for expressing yourself in a fun and trendy way.</p>
+        <p>Explore our latest collection today and find the perfect fit for your wardrobe!</p>
+    </div>
+
+    <!-- search bar -->
+    <div class="search-container">
+        <input type="text" placeholder="Search products...">
+        <button type="submit">🔍</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MASKED EMOJI | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

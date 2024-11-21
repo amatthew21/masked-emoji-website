@@ -1,8 +1,8 @@
-# Standard Integration with PayPal : HTML/JS
+# Advanced Integration with PayPal : HTML/JS
 
 ## Getting Started
 
-This guide will walk you through setting up and running the HTML/JS Standard Integration locally.
+This guide will walk you through setting up and running the HTML/JS Advanced Integration locally.
 
 ### Before You Code
 
@@ -65,7 +65,7 @@ npm install
             npm run start
         ```
 
-        This will start the development server, and you should be able to access the Standard Checkout Page in your browser at `http://localhost:3000` (or the port specfied in the terminal output).
+        This will start the development server, and you should be able to access the Advanced Checkout Page in your browser at `http://localhost:3000` (or the port specfied in the terminal output).
 
 ### Additional Notes
 

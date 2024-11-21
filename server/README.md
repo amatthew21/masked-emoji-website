@@ -1,6 +1,6 @@
-# Standard Integration Node.js Sample
+# Advanced Integration Node.js Sample
 
-PayPal Standard Integration sample in Node.js
+PayPal Advanced Integration sample in Node.js
 
 ## Running the sample
 

@@ -78,7 +78,7 @@
 
     <!-- Logo and Title -->
     <div class="logo">MASKED EMOJI CLOTHING
-    <img src="../root/logo.png" alt="Toxic Tee"></div>
+    <img src="../img/logo.png" alt="Toxic Tee"></div>
 
     <!-- Navigation Bar -->
     <div class="navbar">
@@ -101,11 +101,13 @@
     <div class="product-grid">
         <!-- Product 1 -->
         <div class="product-item">
-            <img src="../root/img/toxic1.png" alt="Product 1" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color: Black,Back Logo(orange,pink,green,blue)')">
+            <img src="../img/toxic1.png" alt="Product 1" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color: Black,Back Logo(orange,pink,green,blue)')">
             <div class="product-name"> Toxic Tee</div>
             <div class="product-price">$20.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart('Toxic Tee', 35.00)">Add to Cart</button>
         </div>
 
+    <script src = "../js/cart.js"></script>
     <!-- JavaScript for Popup Message -->
     <script>
         function showPopup(name, price) {

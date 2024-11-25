@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASKED EMOJI CLOTHING - Sweatpants</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .logo {
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+        }
+        .navbar a[href="Sweatpants.html"] {
+        background-color: yellow;
+         color: black; /* Change text color for better contrast */
+         }
+        .search-bar {
+            position: relative;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .dropdown {
+            position: absolute;
+            width: 100%;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 1000;
+            display: none;
+        }
+        .dropdown a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+        }
+        .dropdown a:hover {
+            background-color: #f4f4f4;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-item {
+            text-align: center;
+        }
+        .product-item img {
+            width: 100%;
+            cursor: pointer;
+            max-width: 200px;
+             max-height: 180px;
+            
+        }
+        .product-name {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .product-price {
+            color: #555;
+        }
+        .logo img {
+            width: 100%;
+            cursor: pointer;
+            max-width: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo and Title -->
+    <div class="logo">MASKED EMOJI CLOTHING
+    <img src="../img/logo.png" alt="Toxic Tee"></div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+     <div>
+        <a href="../index.html">Home</a>
+        <a href="shirts.html">Shirts</a>
+        <a href="hoodies.html">Hoodies</a>
+        <a href="sweatpants.html">Sweatpants</a>
+        <a href="sweatsuits.html">Sweatsuits</a>
+        <a href="comingsoon.html">Coming Soon</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="cart.html" class="cart-icon">🛒</a>
+    </div>
+  </div>
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search products..." onkeyup="filterDropdown()">
+        <div class="dropdown" id="dropdownMenu">
+            <!-- Dynamic Dropdown Items -->
+        </div>
+    </div>
+
+     <!-- Product Grid -->
+    <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-item">
+            <img src="../img/pantnavy.png" alt="Navy Jogger" onclick="showPopup('Navy Jogger', '$30.00')">
+            <div class="product-name">Navy Jogger</div>
+            <div class="product-price">$30.00</div>
+            <label for="sizeSelect1">Available Sizes:</label>
+            <select id="sizeSelect1" class="size-select">
+                <option value="">Select Size </option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('Navy Jogger', 30.00)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-item">
+            <img src="../img/pantblue.png" alt="BLK n BLUE Jogger" onclick="showPopup('BLK n BLUE Jogger', '$30.00')">
+            <div class="product-name">BLK n BLUE Jogger</div>
+            <div class="product-price">$30.00</div>
+            <label for="sizeSelect2"> Available Sizes:</label>
+            <select id="sizeSelect2" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('BLK n BLUE Jogger', 30.00)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-item">
+            <img src="../img/pantdtox.png" alt="Dark Toxic Jogger" onclick="showPopup('Dark Toxic Jogger', '$30.00')">
+            <div class="product-name">Dark Toxic Jogger</div>
+            <div class="product-price">$30.00</div>
+            <label for="sizeSelect3"> Available Sizes:</label>
+            <select id="sizeSelect3" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('Dark Toxic Jogger', 30.00)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-item">
+            <img src="../img/pantgray.png" alt="Gray Jogger" onclick="showPopup('Gray Jogger', '$30.00')">
+            <div class="product-name">Gray Jogger</div>
+            <div class="product-price">$30.00</div>
+            <label for="sizeSelect4"> Available Sizes:</label>
+            <select id="sizeSelect4" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('Gray Jogger', 30.00)">Add to Cart</button>
+        </div>
+
+        <!-- Repeat for other products -->
+        <!-- Product 5 -->
+        <div class="product-item">
+            <img src="../img/pantpurp.png" alt="Black n Purple Jogger" onclick="showPopup('Black n Purple Jogger', '$30.00')">
+            <div class="product-name">Black n Purple Jogger</div>
+            <div class="product-price">$30.00</div>
+            <label for="sizeSelect5">Available Sizes:</label>
+            <select id="sizeSelect5" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('Black n Purple Jogger', 30.00)">Add to Cart</button>
+        </div>
+
+               <!-- Product 6 -->
+        <div class="product-item">
+            <img src="../img/panttox.png" alt="Toxic Jogger" onclick="showPopup('Toxic Jogger', '$30.00')">
+            <div class="product-name">Toxic Jogger</div>
+            <div class="product-price">$30.00</div>
+            <label for="sizeSelect6">Available Sizes:</label>
+            <select id="sizeSelect6" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('Toxic Jogger', 30.00)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product-item">
+            <img src="../img/panttan.png" alt="Tan Jogger" onclick="showPopup('Tan Jogger', '$30.00')">
+            <div class="product-name">Tan Jogger</div>
+            <div class="product-price">$30.00</div>
+            <label for="sizeSelect7">Available Sizes:</label>
+            <select id="sizeSelect7" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('Tan Jogger', 30.00)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product-item">
+            <img src="../img/pantlie.png" alt="LOVE IS ETERNAL (LIE) Jogger" onclick="showPopup('LOVE IS ETERNAL (LIE) Jogger', '$30.00')">
+            <div class="product-name">LOVE IS ETERNAL (LIE) Jogger</div>
+            <div class="product-price">$30.00</div>
+            <label for="sizeSelect8">Available Sizes:</label>
+            <select id="sizeSelect8" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('LOVE IS ETERNAL (LIE) Jogger', 30.00)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product-item">
+            <img src="../img/pantpink.png" alt="Pink Suit" onclick="showPopup('Pink Suit', '$30.00')">
+            <div class="product-name">Pink Suit</div>
+            <div class="product-price">$30.00</div>
+            <label for="sizeSelect9">Available Sizes:</label>
+            <select id="sizeSelect9" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('Pink Suit', 30.00)">Add to Cart</button>
+        </div>
+
+    <script src = "../js/cart.js"></script>
+
+    <!-- JavaScript for Popup Message -->
+    <script>
+
+        function showPopup(name, price) {
+            alert(name + " - " + price);
+        }
+        const items = [
+            { name: "LOVE IS ETERNAL(LIE) Jogger", link: "LIEJogger.html" },
+            { name: "Tan Jogger", link: "pinkbeanie.html" },
+            { name: "Toxic Jogger", link: "greenbeanie.html" },
+            { name: "Black n pink Jogger", link: "brownbeanie.html" },
+            { name: "Black n Purple Jogger", link: "orangebeanie.html" },
+            { name: "Gray Jogger", link: "orangebeanie.html" },
+            { name: "Dark Toxic Jogger", link: "orangebeanie.html" },
+            { name: "BLK n BLUE Jogger", link: "orangebeanie.html" },
+            { name: "Navy Jogger", link: "orangebeanie.html" }
+
+        ];
+
+        function filterDropdown() {
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            const dropdown = document.getElementById("dropdownMenu");
+            dropdown.innerHTML = ""; // Clear previous results
+            if (input) {
+                dropdown.style.display = "block";
+                const filteredItems = items.filter(item =>
+                    item.name.toLowerCase().includes(input)
+                );
+                if (filteredItems.length) {
+                    filteredItems.forEach(item => {
+                        const link = document.createElement("a");
+                        link.href = item.link;
+                        link.textContent = item.name;
+                        dropdown.appendChild(link);
+                    });
+                } else {
+                    dropdown.innerHTML = "<div style='padding:10px;'>No items found</div>";
+                }
+            } else {
+                dropdown.style.display = "none";
+            }
+        }
+
+        // Hide dropdown if clicked outside
+        document.addEventListener("click", (e) => {
+            if (!document.querySelector(".search-bar").contains(e.target)) {
+                document.getElementById("dropdownMenu").style.display = "none";
+            }
+        });
+    </script>
+
+    
+
+    </body>
+</html>

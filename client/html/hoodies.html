@@ -57,8 +57,9 @@
         .product-item img {
             width: 100%;
             cursor: pointer;
-            max-width: 300px;
-            max-height: 200px;
+            max-width: 200px;
+             max-height: 180px;
+            
         }
         .product-name {
             font-size: 18px;
@@ -82,36 +83,188 @@
 
     <!-- Navigation Bar -->
     <div class="navbar">
-        <div class="navbar">
-            <a href="../index.html">Home</a>
-            <a href="shirts.html">Shirts</a>
-            <a href="hoodies.html">Hoodies</a>
-            <a href="ENTER FILE NAME HERE FOR sweatpants.html">Sweatpants</a>
-            <a href="ENTER FILE NAME HERE FOR Sweatsuits.html">Sweatsuits</a>
-            <a href="ENTER FILE NAME HERE FOR coming soon.html">Coming soon</a>
-            <a href="ENTER FILE NAME HERE FOR logos and designs.html">Logos and Designs</a>
-            <a href="contactus.html">Contact Us</a>
-            <a href="cart.html" class="cart-icon">🛒</a>
-        </div>
+     <div>
+        <a href="../index.html">Home</a>
+        <a href="shirts.html">Shirts</a>
+        <a href="hoodies.html">Hoodies</a>
+        <a href="sweatpants.html">Sweatpants</a>
+        <a href="sweatsuits.html">Sweatsuits</a>
+        <a href="comingsoon.html">Coming Soon</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="cart.html" class="cart-icon">🛒</a>
     </div>
-
-        <div class="search-bar">
+      <div class="search-bar">
             <input type="text" id="searchInput" placeholder="Search products..." onkeyup="filterProducts()">
         </div>
-    </div>
+  </div>
     <!-- Product Grid -->
     <div class="product-grid">
         <!-- Product 1 -->
         <div class="product-item">
-            <img src="../img/RR2.jpg" alt="Product 1" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color: RED, Logo(RED,WHITE)')">
+            <img src="../img/RR2.JPG" alt="Product 1" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color: RED, Logo(RED,WHITE)')">
             <div class="product-name"> Ragin'RED</div>
             <div class="product-price">$35.00</div>
-            <button class="add-to-cart-btn" onclick="addToCart('Ragin\'RED', 35.00)">Add to Cart</button>
+ 	<label for="sizeSelect1"> Available Sizes:</label>
+            <select id="sizeSelect1" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('Ragin\'Red', 35.00)">Add to Cart</button>
         </div>
-    </div>
-
-    <script src = "../js/cart.js"></script>
-
+        <!-- Product 2 -->
+        <div class="product-item">
+            <img src="../img/FB1.JPG" alt="Product 2" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color: Royal Blue, Logo(BLUE,WHITE)')">
+            <div class="product-name">Feeling BLUE?</div>
+            <div class="product-price">$35.00</div>
+ 	<label for="sizeSelect2"> Available Sizes:</label>
+            <select id="sizeSelect2" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('Feeling BLUE?', 35.00)">Add to Cart</button>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-item">
+            <img src="../img/Placehold.JPG" alt="Product 3" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color:Pink, Logo(pale-yellow,red,rose-brown)')">
+            <div class="product-name">Green with Envy</div>
+            <div class="product-price">$35.00</div>
+	 <label for="sizeSelect3"> Available Sizes:</label>
+            <select id="sizeSelect3" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('Green with Envy', 35.00)">Add to Cart</button>
+        </div>
+        <!-- Product 4 -->
+        <div class="product-item">
+            <img src="../img/PP.JPG" alt="Product 4" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color:Black, Logo(Yellow,Red,Brown)')">
+            <div class="product-name">Purple Pride</div>
+            <div class="product-price">$35.00</div>
+	 <label for="sizeSelect4"> Available Sizes:</label>
+            <select id="sizeSelect4" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('Purple Pride', 35.00)">Add to Cart</button>
+        </div>
+        <!-- Product 5 -->
+        <div class="product-item">
+            <img src="../img/lillogo.png" alt="Product 5" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color:Black, Logo(Yellow,Red,Brown)')">
+            <div class="product-name">Pretty n Pink</div>
+            <div class="product-price">$40.00</div>
+	 <label for="sizeSelect5"> Available Sizes:</label>
+            <select id="sizeSelect5" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('Pretty n Pink', 40.00)">Add to Cart</button>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-item">
+            <img src="../img/tanmoto.JPG" alt="Product 6" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color:Sand, Logo(Sand,dark-tan)')">
+            <div class="product-name">LTLYL Hoodie(Tan)</div>
+            <div class="product-price">$40.00</div>
+	 <label for="sizeSelect6"> Available Sizes:</label>
+            <select id="sizeSelect6" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('LTLYL Hoodie(Tan)', 40.00)">Add to Cart</button>
+        </div>
+        <!-- Product 7 -->
+        <div class="product-item">
+            <img src="../img/LTLYLgry.JPG" alt="Product 7" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color:Black, Logo(Pink,white)')">
+            <div class="product-name">LTLYL Hoodie(Gray)</div>
+            <div class="product-price">$40.00</div>
+	 <label for="sizeSelect7"> Available Sizes:</label>
+            <select id="sizeSelect7" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('LTLYL Hoodie(Gray)', 40.00)">Add to Cart</button>
+        </div>
+        <!-- Product 8 -->
+        <div class="product-item">
+            <img src="../img/WHTGRY.JPG" alt="Product 8" onclick="showPopup('Product 8', '$49.99')">
+            <div class="product-name">White hoodie x grey blue</div>
+            <div class="product-price">$35.00</div>
+	 <label for="sizeSelect8"> Available Sizes:</label>
+            <select id="sizeSelect8" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('White hoodie x grey blue', 35.00)">Add to Cart</button>
+        </div>
+        <!-- Product 9 -->
+    <div class="product-item">
+            <img src="../img/PRPtxt.JPG" alt="Product 9" onclick="showPopup('Product 8', '$49.99')">
+            <div class="product-name">Purple Hoodie Text Logo</div>
+            <div class="product-price">$40.00</div>
+	 <label for="sizeSelect9"> Available Sizes:</label>
+            <select id="sizeSelect9" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('Purple Hoodie Text Logo', 40.00)">Add to Cart</button>
+        </div>
+        <!-- Product 10 -->
+        <div class="product-item">
+            <img src="../img/pinkcurs.JPG" alt="Product 9" onclick="showPopup('Product 8', '$49.99')">
+            <div class="product-name">PINK CURSIVE</div>
+            <div class="product-price">$35.00</div>
+	 <label for="sizeSelect10"> Available Sizes:</label>
+            <select id="sizeSelect10" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('PINK CURSIVE', 35.00)">Add to Cart</button>
+        </div>
+        <!-- Product 11 -->
+        <div class="product-item">
+            <img src="../img/misu.JPG" alt="Product 9" onclick="showPopup('Product 8', '$49.99')">
+            <div class="product-name">Misunderstood Hoodie</div>
+            <div class="product-price">$35.00</div>
+	 <label for="sizeSelect11"> Available Sizes:</label>
+            <select id="sizeSelect11" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('Misunderstood Hoodie', 35.00)">Add to Cart</button>
+        </div>
     <!-- JavaScript for Popup Message -->
     <script>
         function showPopup(name, price) {

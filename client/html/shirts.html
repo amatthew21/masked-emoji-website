@@ -57,8 +57,8 @@
         .product-item img {
             width: 100%;
             cursor: pointer;
-            max-width: 300px;
-            max-height: 150px;
+            max-width: 200px;
+            max-height: 180px;
         }
         .product-name {
             font-size: 18px;
@@ -82,17 +82,17 @@
 
     <!-- Navigation Bar -->
     <div class="navbar">
+     <div>
         <a href="../index.html">Home</a>
-            <a href="shirts.html">Shirts</a>
-            <a href="hoodies.html">Hoodies</a>
-            <a href="ENTER FILE NAME HERE FOR sweatpants.html">Sweatpants</a>
-            <a href="ENTER FILE NAME HERE FOR Sweatsuits.html">Sweatsuits</a>
-            <a href="ENTER FILE NAME HERE FOR coming soon.html">Coming soon</a>
-            <a href="ENTER FILE NAME HERE FOR logos and designs.html">Logos and Designs</a>
-            <a href="contactus.html">Contact Us</a>
-            <a href="cart.html" class="cart-icon">🛒</a>
+        <a href="shirts.html">Shirts</a>
+        <a href="hoodies.html">Hoodies</a>
+        <a href="sweatpants.html">Sweatpants</a>
+        <a href="sweatsuits.html">Sweatsuits</a>
+        <a href="comingsoon.html">Coming Soon</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="cart.html" class="cart-icon">🛒</a>
     </div>
-
       <div class="search-bar">
             <input type="text" id="searchInput" placeholder="Search products..." onkeyup="filterProducts()">
         </div>
@@ -104,10 +104,126 @@
             <img src="../img/toxic1.png" alt="Product 1" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color: Black,Back Logo(orange,pink,green,blue)')">
             <div class="product-name"> Toxic Tee</div>
             <div class="product-price">$20.00</div>
-            <button class="add-to-cart-btn" onclick="addToCart('Toxic Tee', 35.00)">Add to Cart</button>
+ 	<label for="sizeSelect1"> Available Sizes:</label>
+            <select id="sizeSelect1" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('Toxic Tee', 20.00)">Add to Cart</button>
         </div>
+        <!-- Product 2 -->
+        <div class="product-item">
+            <img src="../img/SS1.png" alt="Product 2" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color:Black, Logo(orange,pink,green,blue)')">
+            <div class="product-name">Starstruck Tee</div>
+            <div class="product-price">$20.00</div>
+ 	<label for="sizeSelect2"> Available Sizes:</label>
+            <select id="sizeSelect2" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('Starstruck Tee', 20.00)">Add to Cart</button>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-item">
+            <img src="../img/PS.JPG" alt="Product 3" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color:Pink, Logo(pale-yellow,red,rose-brown)')">
+            <div class="product-name">MEC Pink Tee</div>
+            <div class="product-price">$16.00</div>
+ 	<label for="sizeSelect3"> Available Sizes:</label>
+            <select id="sizeSelect3" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('MEC Pink Tee', 16.00)">Add to Cart</button>
+        </div>
+        <!-- Product 4 -->
+        <div class="product-item">
+            <img src="../img/BLKlogo2.JPG" alt="Product 4" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color:Black, Logo(Yellow,Red,Brown)')">
+            <div class="product-name">MEC Black Tee(big logo)</div>
+            <div class="product-price">$16.00</div>
+ 	<label for="sizeSelect4"> Available Sizes:</label>
+            <select id="sizeSelect4" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('MEC Black Tee(big logo)', 16.00)">Add to Cart</button>
+        </div>
+        <!-- Product 5 -->
+        <div class="product-item">
+            <img src="../img/lillogo.png" alt="Product 5" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color:Black, Logo(Yellow,Red,Brown)')">
+            <div class="product-name">MEC Black Tee(pocket logo)</div>
+            <div class="product-price">$16.00</div>
+	 <label for="sizeSelect5"> Available Sizes:</label>
+            <select id="sizeSelect5" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('MEC Black Tee(pocket logo)', 16.00)">Add to Cart</button>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-item">
+            <img src="../img/tanlongsleeve.JPG" alt="Product 6" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color:Sand, Logo(Sand,dark-tan)')">
+            <div class="product-name">SANDY Long Sleeve</div>
+            <div class="product-price">$25.00</div>
+ 	<label for="sizeSelect6"> Available Sizes:</label>
+            <select id="sizeSelect6" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('SANDY Long Sleeve', 25.00)">Add to Cart</button>
+        </div>
+        <!-- Product 7 -->
+        <div class="product-item">
+            <img src="../img/pnkls.jpg" alt="Product 7" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color:Black, Logo(Pink,white)')">
+            <div class="product-name">PINK LOGO Long Sleeve</div>
+            <div class="product-price">$25.00</div>
+	 <label for="sizeSelect7"> Available Sizes:</label>
+            <select id="sizeSelect7" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('PINK LOGO Long Sleeve', 25.00)">Add to Cart</button>
+        </div>
+        <!-- Product 8 -->
+        <div class="product-item">
+            <img src="../img/tto.JPG" alt="Product 8" onclick="showPopup('Product 8', '$49.99')">
+            <div class="product-name">"THIS THE ONE" Long Sleeve</div>
+            <div class="product-price">$25.00</div>
+ 	<label for="sizeSelect8"> Available Sizes:</label>
+            <select id="sizeSelect8" class="size-select">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <button class="add-to-cart-btn" onclick="addToCart('THIS THE ONE Long Sleeve', 25.00)">Add to Cart</button>
+        </div>
+        <!-- Product 9 -->
+    
 
     <script src = "../js/cart.js"></script>
+
     <!-- JavaScript for Popup Message -->
     <script>
         function showPopup(name, price) {

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASKED EMOJI CLOTHING - Sweatsuits</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .logo {
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+        }
+        .navbar a[href="sweatsuits.html"] {
+        background-color: yellow;
+         color: black; /* Change text color for better contrast */
+         }
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        .search-bar input {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-item {
+            text-align: center;
+        }
+        .product-item img {
+            width: 100%;
+            cursor: pointer;
+            max-width: 200px;
+             max-height: 180px;
+            
+        }
+        .product-name {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .product-price {
+            color: #555;
+        }
+        .logo img {
+            width: 100%;
+            cursor: pointer;
+            max-width: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo and Title -->
+    <div class="logo">MASKED EMOJI CLOTHING
+    <img src="../img/logo.png" alt="Toxic Tee"></div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+     <div>
+        <a href="../index.html">Home</a>
+        <a href="shirts.html">Shirts</a>
+        <a href="hoodies.html">Hoodies</a>
+        <a href="sweatpants.html">Sweatpants</a>
+        <a href="sweatsuits.html">Sweatsuits</a>
+        <a href="comingsoon.html">Coming Soon</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="cart.html" class="cart-icon">🛒</a>
+    </div>
+      <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search products..." onkeyup="filterProducts()">
+        </div>
+  </div>
+    <!-- Product Grid -->
+    <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-item">
+            <img src="../img/NAVYsuit.PNG" alt="Product 1" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color: RED, Logo(RED,WHITE)')">
+            <div class="product-name"> Navy Suit</div>
+            <div class="product-price">$60.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart('Navy Suit', 60.00)">Add to Cart</button>
+        </div>
+        <!-- Product 2 -->
+        <div class="product-item">
+            <img src="../img/BLUEsuit.PNG" alt="Product 2" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color: Royal Blue, Logo(BLUE,WHITE)')">
+            <div class="product-name">BLK n BLUE suit</div>
+            <div class="product-price">$60.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart('BLK n BLUE suit', 60.00)">Add to Cart</button>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-item">
+            <img src="../img/DTOXsuit.PNG" alt="Product 3" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color:Pink, Logo(pale-yellow,red,rose-brown)')">
+            <div class="product-name">Dark Toxic suit</div>
+            <div class="product-price">$70.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart('Dark Toxic suit', 70.00)">Add to Cart</button>
+        </div>
+        <!-- Product 4 -->
+        <div class="product-item">
+            <img src="../img/GrySuit.PNG" alt="Product 4" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color:Black, Logo(Yellow,Red,Brown)')">
+            <div class="product-name">Gray suit</div>
+            <div class="product-price">$60.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart('Gray suit', 60.00)">Add to Cart</button>
+        </div>
+        <!-- Product 5 -->
+        <div class="product-item">
+            <img src="../img/PrpSuir.PNG" alt="Product 5" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color:Black, Logo(Yellow,Red,Brown)')">
+            <div class="product-name">Black n Purple suit</div>
+            <div class="product-price">$60.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart('Black n Purple suit', 60.00)">Add to Cart</button>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-item">
+            <img src="../img/TOXsuit.PNG" alt="Product 6" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color:Sand, Logo(Sand,dark-tan)')">
+            <div class="product-name">Toxic suit</div>
+            <div class="product-price">$70.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart('Toxic suit', 70.00)">Add to Cart</button>
+        </div>
+        <!-- Product 7 -->
+        <div class="product-item">
+            <img src="../img/TanSuit.jpg" alt="Product 7" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color:Black, Logo(Pink,white)')">
+            <div class="product-name">Tan suit</div>
+            <div class="product-price">$60.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart('Tan suit', 60.00)">Add to Cart</button>
+        </div>
+        <!-- Product 8 -->
+        <div class="product-item">
+            <img src="../img/LIEsuit.PNG" alt="Product 8" onclick="showPopup('Product 8', '$49.99')">
+            <div class="product-name">LOVE IS ETERNAL(LIE)suit</div>
+            <div class="product-price">$70.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart('LOVE IS ETERNAL(LIE)suit', 70.00)">Add to Cart</button>
+        </div>
+        <!-- Product 9 -->
+    <div class="product-item">
+            <img src="../img/PNKsuit.jpg" alt="Product 7" onclick="showPopup('50/50 cotton poly mix', 'Unixsex Fit Color:Black, Logo(Pink,white)')">
+            <div class="product-name">Pink suit</div>
+            <div class="product-price">$60.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart('Pink suit', 60.00)">Add to Cart</button>
+        </div>
+
+    <script src = "../js/cart.js"></script>
+    <!-- JavaScript for Popup Message -->
+    <script>
+        function showPopup(name, price) {
+            alert(name + " - " + price);
+        }
+    </script>
+
+</body>
+</html>

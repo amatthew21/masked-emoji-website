@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASKED EMOJI CLOTHING - Accessories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .logo {
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+        }
+        .navbar a[href="accessories.html"] {
+            background-color: yellow;
+            color: black;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        .search-bar input {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-item {
+            text-align: center;
+        }
+        .product-item img {
+        width: 400px; /* Fixed width */
+        height: 360px; /* Fixed height */
+        object-fit: cover; /* Ensures the image fills the container without distortion */
+        border-radius: 8px; /* Optional: Rounded corners for aesthetics */
+        cursor: pointer;
+    }
+        }
+        .product-name {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .product-price {
+            color: #555;
+        }
+        .logo img {
+            width: 100%;
+            cursor: pointer;
+            max-width: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo and Title -->
+    <div class="logo">MASKED EMOJI CLOTHING
+        <img src="../img/logo.png" alt="logo">
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="shirts.html">Shirts</a>
+        <a href="hoodies.html">Hoodies</a>
+        <a href="sweatpants.html">Sweatpants</a>
+        <a href="sweatsuits.html">Sweatsuits</a>
+        <a href="comingsoon.html">Coming Soon</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="cart.html" class="cart-icon">🛒</a>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search products..." onkeyup="filterProducts()">
+        </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid">
+        <!-- Product Items -->
+        <div class="product-item">
+            <img src="../img/ylwbean.JPG" alt="Product 1" onclick="showPopup('50/50 cotton poly mix', 'Unisex Fit Color: RED, Logo(RED,WHITE)')">
+            <div class="product-name">MEC Beanie(Yellow)</div>
+            <div class="product-price">$10.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart('MEC Beanie(Yellow)', 10.00)">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="../img/pnkberan.JPG" alt="Product 2" onclick="showPopup('50/50 cotton poly mix', 'Unisex Fit Color: Royal Blue, Logo(BLUE,WHITE)')">
+            <div class="product-name">MEC Beanie(Pink)</div>
+            <div class="product-price">$10.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart('MEC Beanie(Pink)', 10.00)">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="../img/greenbean.JPG" alt="Product 3" onclick="showPopup('50/50 cotton poly mix', 'Unisex Fit Color: Pink, Logo(Pale-yellow, Red, Rose-brown)')">
+            <div class="product-name">MEC Beanie(Green)</div>
+            <div class="product-price">$10.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart('MEC Beanie(Green)', 10.00)">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="../img/brwnbean.JPG" alt="Product 4" onclick="showPopup('50/50 cotton poly mix', 'Unisex Fit Color: Black, Logo(Yellow, Red, Brown)')">
+            <div class="product-name">MEC Beanie(Brown)</div>
+            <div class="product-price">$10.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart('MEC Beanie(Brown)', 10.00)">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="../img/orngbean.JPG" alt="Product 5" onclick="showPopup('50/50 cotton poly mix', 'Unisex Fit Color: Black, Logo(Yellow, Red, Brown)')">
+            <div class="product-name">MEC Beanie(Orange)</div>
+            <div class="product-price">$10.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart('MEC Beanie(Orange)', 10.00)">Add to Cart</button>
+        </div>
+        
+    <script src = "../js/cart.js"></script>
+
+    <!-- JavaScript for Popup Message -->
+    <script>
+        function showPopup(name, price) {
+            alert(name + " - " + price);
+        }
+    </script>
+
+</body>
+</html>
